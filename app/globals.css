@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+.tick-hand {
+  animation: tick 60s steps(60) infinite;
+}
+@keyframes tick {
+  to { transform: translate(-50%, -100%) rotate(360deg); }
+}
